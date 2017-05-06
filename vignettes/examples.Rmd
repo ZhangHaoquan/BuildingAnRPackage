@@ -1,0 +1,38 @@
+---
+title: "Building R Packages"
+author: "Zhang Haoquan"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Tutorial
+The following tutorial will walk you through how to use the package week4
+
+```{r Importing Required Libraries, warning=F, message=F}
+# Import library
+library(week4)
+library(dplyr)
+library(maps)
+```
+
+```{r Actual Examples}
+# Use make_filename to create a valid file name
+make_filename(2014)
+
+# Use fars_read to read the file. Make sure the data files are in the working directory
+list.files()
+fars_read(filename = make_filename(year = 2014))
+
+# Use fars_read_years get a list of years each being a tibble showing all records for each year
+fars_read_years(years = c(2013, 2014))
+
+# Use fars_summarize_years to summarise the record counts of each month and each year
+fars_summarize_years(years = c(2014, 2015))
+
+# Use fars_map_state to make a plot of the instances of accidents in a particular state
+fars_map_state(state.num = 1, year = 2013)
+```

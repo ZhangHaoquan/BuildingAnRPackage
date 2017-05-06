@@ -1,10 +1,40 @@
 # BuildingAnRPackage
 Coursera Assignment
 
-## Getting Started
+## What i did
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+1. Creating a Git Project
+  + Create a [public repository](https://github.com/ZhangHaoquan/BuildingAnRPackage)
+  + Create a new project from RStudio in a local repository
+  + Add, Commit and Push the project folder to the remote repository
+  + devtools::use_mit_license adds a license to prevent warnings from checks later
 
+2. Package Core Functions
+  + Data is gathered from [US National Highway Traffic Safety Administration](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars#)
+  + The dataset of interest is provide by [Fatality Analysis Reporting System (FARS)](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars#)
+  + The official FTP site to download the data can be found [here](ftp://ftp.nhtsa.dot.gov/fars/)
+  + Downloaded data are placed in the same folder as the vignette to power the markdown
+  + Add fars_function.R along with the relevant roxygen2
+  + Learn roxygen tags via these links:
+    * [link_1](https://cran.r-project.org/web/packages/roxygen2/vignettes/formatting.html}{RStudio Formatting})
+    * [link_2](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html)
+  + devtools::document automatically generates the NAMESPACE in the root folder
+  + devtools::document also generates and the documentation files in the man folder
+
+3. Setting up testing framework
+  + devtools::use_testthat sets up testing infrastructure, creating tests/testthat.R and tests/testthat/
+  + devtools::use_test sets creates tests/testthat/test-<name>.R and opens it for editing.
+  + devtools::test executes the tests
+  + Implement a test for make_filename.R functions
+  
+4. Create a Vignette
+  + devtools::use_vignette creates a sub-directory and adds a vignette markdown document there for edit
+
+5. Check build
+  + devtools::check builds the package applying the same rigous as travis
+  + devtools::check_failures reads the check output folder and suggests possible areas of failure
+  + Check that R CMD check results has no errors
+  
 ### Prerequisites
 
 What things you need to install the software and how to install them
