@@ -1,5 +1,5 @@
 # BuildingAnRPackage
-Coursera Assignment
+[![Build Status](https://travis-ci.org/ZhangHaoquan/BuildingAnRPackage.svg?branch=master)](https://travis-ci.org/ZhangHaoquan/BuildingAnRPackage)
 
 ## To-Dos
 
@@ -34,6 +34,7 @@ Coursera Assignment
   + devtools::check builds the package applying the same rigous as travis
   + devtools::check_failures reads the check output folder and suggests possible areas of failure
   + Check that R CMD check results has no errors
+  + Add Travis badge
 
 ## License
 
