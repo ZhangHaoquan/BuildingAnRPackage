@@ -16,7 +16,7 @@
   + Downloaded data are placed in the same folder as the vignette to power the markdown
   + Add fars_function.R along with the relevant roxygen2
   + Learn roxygen tags via these links:
-    * [link_1](https://cran.r-project.org/web/packages/roxygen2/vignettes/formatting.html}{RStudio Formatting})
+    * [link_1](https://cran.r-project.org/web/packages/roxygen2/vignettes/formatting.html)
     * [link_2](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html)
   + devtools::document automatically generates the NAMESPACE in the root folder
   + devtools::document also generates and the documentation files in the man folder
